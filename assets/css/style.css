@@ -3,11 +3,17 @@
 .main-heading {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
+  margin-top: 10vh;
+  color: #ffff00;
+  font-size: 50px;
 }
 
 .sub-heading {
   font-family: "Oswald", sans-serif;
   text-align: center;
+  margin-top: 15vh;
+  color: #ffff00;
+  font-size: 30px;
 }
 
 /* Backgrounds */
@@ -34,4 +40,7 @@ body {
 
 .btn-container {
     text-align: center;
+    margin-top: 20vh;
 }
+
+/*  */
