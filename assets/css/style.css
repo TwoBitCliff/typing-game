@@ -1,19 +1,37 @@
 /* Headings */
 
 .main-heading {
-    font-family: "Roboto Condensed", sans-serif;
-    text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
 }
 
 .sub-heading {
-    font-family: "Oswald", sans-serif;
-    text-align: center;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
 }
 
 /* Backgrounds */
 
 body {
-    background-image: url("/assets/images/typewriter.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-   }
+  background-image: url("/assets/images/typewriter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Buttons */
+
+.game-link {
+  background: #ffff00;
+  border: none;
+  color: #ff0000;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.btn-container {
+    text-align: center;
+}
