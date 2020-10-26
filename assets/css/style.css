@@ -40,7 +40,47 @@ body {
 
 .btn-container {
     text-align: center;
+    margin-top: 30px;
+}
+.homepage-btn-container {
     margin-top: 20vh;
+    text-align: center;
 }
 
-/*  */
+/* Words Per Minute */
+
+.game-box {
+    text-align: center;
+}
+
+.time-test {
+    width: 75%;
+    height: 200px;
+    background: #ffff00;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-input {
+    width: 75%;
+    height: 75px;
+    background: #ffff00;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.wpm-score-container {
+    text-align: center;
+    width: 75%;
+}
+
+.wpm-score-div {
+    text-align: center;
+    background: #ffff00;
+    width: 30px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 25px;        
+}
