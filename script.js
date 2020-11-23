@@ -22,3 +22,24 @@ let excerpts = [
   "Whoever is happy will make others happy too",
   "The secret of success is to do the common thing uncommonly well"
 ]; 
+
+// Timer
+
+const time = document.getElementById("time-left");
+let timeLeft = 5;
+time.innerHTML = timeLeft;
+
+const countDown = setInterval(()=>{
+    timeLeft--;
+    displayTime(timeLeft);
+    time.innerHTML = timeLeft;
+    if(timeLeft <=0){
+        clearInterval(countDown);
+        
+    }
+},1000);
+
+function displayTime(second){    
+};
+
+
