@@ -54,7 +54,7 @@ return excerpts[Math.floor(Math.random()*excerpts.length)];
 async function displayExcerpt(){
     const phrase = await getExcerpt()
     excerptsArea.innerText = phrase
-    document.getElementById("textarea").value = "";
+    
 }
 
 displayExcerpt()
@@ -74,5 +74,5 @@ userReturn.addEventListener("keydown", function (e) {
 function validate(e) {
     var text = e.target.value;
     //validation of the input...
-    console.log(text);
+    document.getElementById("textarea").value = "";
 }
