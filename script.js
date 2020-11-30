@@ -43,12 +43,6 @@ function displayTime(second){
 };
 
 
-
-
-
-function displayTime(second){    
-};
-
 // Excerpts
 const excerptsArea = document.getElementById('excerpt-area');
 
@@ -60,7 +54,25 @@ return excerpts[Math.floor(Math.random()*excerpts.length)];
 async function displayExcerpt(){
     const phrase = await getExcerpt()
     excerptsArea.innerText = phrase
-    document.getElementById("yexyarea").value = "";
+    document.getElementById("textarea").value = "";
 }
 
 displayExcerpt()
+
+// User Text
+
+
+// https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
+
+var userReturn = document.getElementById("textarea");
+userReturn.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        validate(e);
+    }
+});
+
+function validate(e) {
+    var text = e.target.value;
+    //validation of the input...
+    console.log(text);
+}
