@@ -93,3 +93,12 @@ body {
     margin-right: 35px;
     border-radius: 25px;        
 }
+
+/* Text */
+
+#excerpt-area {
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 60px;
+    }
