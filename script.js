@@ -1,11 +1,11 @@
 // Excerpts
 
-let excerpts = [ 
-  "Be the change that you wish to see in the world", 
-  "A room without books is like a body without a soul", 
-  "If you tell the truth, you don't have to remember anything", 
-  "Without music, life would be a mistake", 
-  "Be yourself; everyone else is already taken", 
+let excerpts = [
+  "Be the change that you wish to see in the world",
+  "A room without books is like a body without a soul",
+  "If you tell the truth, you don't have to remember anything",
+  "Without music, life would be a mistake",
+  "Be yourself; everyone else is already taken",
   "So many books, so little time",
   "You have to be odd to be number one",
   "The most difficult thing is the decision to act, the rest is merely tenacity",
@@ -20,8 +20,8 @@ let excerpts = [
   "What we achieve inwardly will change outer reality",
   "The way to get started is to quit talking and begin doing",
   "Whoever is happy will make others happy too",
-  "The secret of success is to do the common thing uncommonly well"
-]; 
+  "The secret of success is to do the common thing uncommonly well",
+];
 
 // Timer
 
@@ -29,50 +29,51 @@ const time = document.getElementById("time-left");
 let timeLeft = 5;
 time.innerHTML = timeLeft;
 
-const countDown = setInterval(()=>{
-    timeLeft--;
-    displayTime(timeLeft);
-    time.innerHTML = timeLeft;
-    if(timeLeft <=0){
-        clearInterval(countDown);
-        
-    }
-},1000);
+const countDown = setInterval(() => {
+  timeLeft--;
+  displayTime(timeLeft);
+  time.innerHTML = timeLeft;
+  if (timeLeft <= 0) {
+    clearInterval(countDown);
+  }
+}, 1000);
 
-function displayTime(second){    
-};
-
-
-// Excerpts
-const excerptsArea = document.getElementById('excerpt-area');
-
-function getExcerpt(){
-return excerpts[Math.floor(Math.random()*excerpts.length)];
-
-}
-
-async function displayExcerpt(){
-    const phrase = await getExcerpt()
-    excerptsArea.innerText = phrase
-    
-}
-
-displayExcerpt()
+function displayTime(second) {}
 
 // User Text
-
 
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 
 var userReturn = document.getElementById("textarea");
 userReturn.addEventListener("keydown", function (e) {
-    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-        validate(e);
-    }
+  if (e.keyCode === 13) {
+    //checks whether the pressed key is "Enter"
+    validate(e);
+  }
 });
 
 function validate(e) {
-    var text = e.target.value;
-    //validation of the input...
-    document.getElementById("textarea").value = "";
+  var text = e.target.value;
+  //validation of the input...
+  document.getElementById("textarea").value = "";
+
+  console.log(textCompare);
+  var textCompare = text.split(" ");
+
+  // Displays new phrase
+
+  const excerptsArea = document.getElementById("excerpt-area");
+
+  function getExcerpt() {
+    return excerpts[Math.floor(Math.random() * excerpts.length)];
+  }
+
+  async function displayExcerpt() {
+    const phrase = getExcerpt();
+    excerptsArea.innerText = phrase;
+    var phraseCompare = phrase.split(" ");
+    console.log(phraseCompare);
+  }
+
+  displayExcerpt();
 }
