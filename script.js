@@ -51,29 +51,56 @@ userReturn.addEventListener("keydown", function (e) {
     validate(e);
   }
 });
+// Displays new phrase
+
+const excerptsArea = document.getElementById("excerpt-area");
+
+function getExcerpt() {
+  return excerpts[Math.floor(Math.random() * excerpts.length)];
+}
+
+async function displayExcerpt() {
+  const phrase = getExcerpt();
+  excerptsArea.innerText = phrase;
+  phraseCompare = phrase.split(" ");
+}
+
+displayExcerpt();
+
+const wPM = document.getElementById('wordsPerMinute')
+var percentage = 00;
+wPM.innerHTML = percentage;
+
+function calculateAccuracy() {
+  for (var i = 0; i < phraseCompare.length; i++) {
+    for (var j = 0; j < textCompare.length; j++) {
+      if (phraseCompare[i] == textCompare[j]) {
+        accuracy++;
+      } else {
+      }
+    }
+  }
+  percentage = (accuracy/phraseCompare.length)*100;
+percentage2 = percentage.toFixed(0)
+
+  wPM.innerHTML = percentage2 + '%';
+
+}
+
+// Compares Accuracy
+var textCompare
 
 function validate(e) {
   var text = e.target.value;
   //validation of the input...
-  document.getElementById("textarea").value = "";
-
+  textCompare = text.split(" ");
   console.log(textCompare);
-  var textCompare = text.split(" ");
+  getExcerpt();
+  console.log(phraseCompare);
+  accuracy = 0;
+  calculateAccuracy();
 
-  // Displays new phrase
-
-  const excerptsArea = document.getElementById("excerpt-area");
-
-  function getExcerpt() {
-    return excerpts[Math.floor(Math.random() * excerpts.length)];
-  }
-
-  async function displayExcerpt() {
-    const phrase = getExcerpt();
-    excerptsArea.innerText = phrase;
-    var phraseCompare = phrase.split(" ");
-    console.log(phraseCompare);
-  }
-
+  
+  document.getElementById("textarea").value = "";
   displayExcerpt();
 }
