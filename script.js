@@ -43,3 +43,24 @@ function displayTime(second){
 };
 
 
+
+
+
+function displayTime(second){    
+};
+
+// Excerpts
+const excerptsArea = document.getElementById('excerpt-area');
+
+function getExcerpt(){
+return excerpts[Math.floor(Math.random()*excerpts.length)];
+
+}
+
+async function displayExcerpt(){
+    const phrase = await getExcerpt()
+    excerptsArea.innerText = phrase
+    document.getElementById("yexyarea").value = "";
+}
+
+displayExcerpt()
