@@ -1,45 +1,186 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
-Welcome TwoBitCliff,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## Typing Game
 
-## Gitpod Reminders
+[View the live project here.](link)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This is a speed typing game, where the user can practice and improve their typing speed. It calculates both how many words per minute the user can type, as well as the accuracy to which they type it.
+
+![Image of Home Page](link)
+
+## User Experience (UX)
+
+- User Stories
+
+  - First Time Visitor Goals
+
+    - As a first time visitor, I want to easily navigate the site.
+    - As a first time visitor, I want to be able to test my typing speed.
+    
+
+  - Returning Visitor Goals
+
+    - As a returning visitor, I want to
+
+  - Frequent Visitor goals
+
+    - As a frequent visitor, I want to
+
+- Design
+
+  - Colour Scheme
+
+    - The colour scheme of this project is black, yellow and red. This gives the site a clear, contrasting aesthetic while making it easy to undertake the game. 
+
+  - Typography
+
+    - There have been three fonts used in this project: xxxx
+      - xx was used for xx
+      - xxx was used for xxx
+      - xx was used for xxx
+
+  - Imagery
+
+    - The only image used for this project was for the background. This image of a typewriter makes for an interesting and related backdrop. 
+
+  - Wireframes
+    - [Desktop](./assets/images/wireframes/desktop)
+    - [Mobile](./assets/images/wireframes/mobile)
+
+## Features
+
+- Responsive across all devices
+  - The game is designed to be played on desktops, however it is possible to play on mobile devices. While played on mobile, the device should be held landscape. Due to the nature of mobile keyboards, reading the phrase to type may be challenging.
+
+
+## Technologies Used
+
+- Languages Used
+  - [HTML 5](https://en.wikipedia.org/wiki/HTML5)
+  - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+  - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- Frameworks, Libraries and Programs Used
+  - [Bootstrap 4.5.2](https://getbootstrap.com/):
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+  - [Google Fonts](https://fonts.google.com/):
+    - Google fonts were used to import the 'ASAP', ‘Lobster’ and ‘Oswald’ fonts into the style.css file which are used throughout this project.
+  - [Git](https://git-scm.com/):
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+  - [GitHub](https://github.com/):
+    - GitHub is used to store the projects code after being pushed from Git.
+  - [Balsamiq](https://balsamiq.com/):
+    - Balsamiq was used to create the wireframes during the design process.
+
+## Testing
+
+  - First Time Visitor Goals
+
+    - As a first time visitor, I want to easily navigate the site.
+        - The site is clear, as it only has limited pages. The links to each page are cleatly marked.
+    - As a first time visitor, I want to be able to test my typing speed.
+        - During and on completion of the game, the site shows the users typing speed and accuracy.
+
+### Further Testing
+
+- The website was tested across multiple browsers, including Google Chrome, Firefox, Opera and Safari.
+- The website was trailed on a range of devices of different sizes, including monitors, laptops, tablets and phones.
+- The content has been run through spell checks.
+- All links were checked to ensure they are active.
+- console.log was used to ensure functionality during the project
+
+### Known Issues
+
+- Functionality on mobile is diminished due to the nature of the project
+ - 
+
+ ### Validation
+
+- The [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) were used to validate each page of the site.
+- Each page had various errors that needed to be fixed. The details of each test can be found below:
+  - Home Page - [Test]() [Validated]()
+  - 
+
+ ### Formatting
+
+- To format the code, each page was run through an online formatter, https://www.freeformatter.com/.
+
+
+
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+   - Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the GitHub Repository
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `jifsrescue-clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Credits
+
+### Code
+
+- The code for the vut the project to help with responsiveness, the grid system and other elements such as the navbar.
+
+### Content
+
+- All content was written by the developer except where credited.
+
+### Media
+
+- All images were sourced royalty free from https://pixabay.com/
+
+
+### Acknowledgments
+
+- Thanks to my Code Institute tutor, who provided support throughout the duration of this project.
+- Thanks to my Code Institute mentor, who provided ideas and feedback at pivotal stages of this project.
+- Thanks to my parents, friends and colleagues who providing constructive criticisms and pointing out spelling issues.
+- I used https://www.reddit.com/r/learnprogramming/ for issues with images displaying.
+- I used the Code Institute source material and various blog posts for issues with both code and bootsrap.
+
+
+
 
 `python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
