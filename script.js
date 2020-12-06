@@ -23,8 +23,23 @@ let excerpts = [
   "The secret of success is to do the common thing uncommonly well",
 ];
 
-// Timer
 
+let textarea = document.querySelector(".textarea");
+
+// Start Game
+var btn = document.getElementById('StartGame')
+btn.addEventListener("click", startGame);
+function startGame(){
+    endGame();
+}
+
+// Ends game
+
+function endGame(){
+    time.innerHTML = "Game Over";
+document.getElementById("textarea").disabled = true;
+}
+// Timer
 const time = document.getElementById("time-left");
 let timeLeft = 5;
 time.innerHTML = timeLeft;
@@ -36,7 +51,9 @@ const countDown = setInterval(() => {
   if (timeLeft <= 0) {
     clearInterval(countDown);
   }
+ 
 }, 1000);
+
 
 function displayTime(second) {}
 
@@ -67,37 +84,46 @@ async function displayExcerpt() {
 
 displayExcerpt();
 
-const wPM = document.getElementById('wordsPerMinute')
+const accuracy = document.getElementById('accuracyDisplay')
 var percentage = 00;
-wPM.innerHTML = percentage;
+accuracy.innerHTML = percentage;
 
 function calculateAccuracy() {
   for (var i = 0; i < phraseCompare.length; i++) {
     for (var j = 0; j < textCompare.length; j++) {
       if (phraseCompare[i] == textCompare[j]) {
-        accuracy++;
+        accuracyCalc++;
       } else {
       }
     }
   }
-  percentage = (accuracy/phraseCompare.length)*100;
-percentage2 = percentage.toFixed(0)
+  percentage = (accuracyCalc/phraseCompare.length)*100;
+percentage2DP = percentage.toFixed(0)
 
-  wPM.innerHTML = percentage2 + '%';
+  accuracy.innerHTML = percentage2DP + '%';
 
 }
 
 // Compares Accuracy
 var textCompare
 
+// Calculates WPM
+
+function calculateWPM(){
+
+}
+
+
+// runs game
 function validate(e) {
   var text = e.target.value;
   //validation of the input...
+ 
   textCompare = text.split(" ");
   console.log(textCompare);
   getExcerpt();
   console.log(phraseCompare);
-  accuracy = 0;
+  accuracyCalc = 0;
   calculateAccuracy();
 
   
