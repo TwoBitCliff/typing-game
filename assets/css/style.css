@@ -102,3 +102,29 @@ body {
     font-size: 30px;
     padding-top: 60px;
     }
+
+.rules {
+    text-align: center;
+    background: #ffff00;
+    width: 75%;
+    padding:10px 10px 10px 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px; 
+}
+
+hr {
+    display: block;
+  border: solid 1px;
+  width: 50%;
+}
+
+ol {
+    text-align: center;
+    display: inline-block;
+}
+li {
+    text-align: left;
+}
