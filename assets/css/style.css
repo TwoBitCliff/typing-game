@@ -24,7 +24,7 @@
 /* Backgrounds */
 
 body {
-  background-image: url("../assets/images/typewriter.jpg");
+  background-image: url("../images/typewriter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -42,11 +42,7 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-/* 
-.rules-btn-container {
-    text-align: center;
-    margin-top: 5px;
-} */
+
 .btn-container {
     text-align: center;
     margin-top: 30px;
