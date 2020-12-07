@@ -24,7 +24,7 @@
 /* Backgrounds */
 
 body {
-  background-image: url("./images/typewriter.jpg");
+  background-image: url("../assets/images/typewriter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
