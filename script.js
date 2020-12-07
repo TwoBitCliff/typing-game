@@ -25,10 +25,10 @@ let excerpts = [
 
 // Element selection
 
-let textarea = document.querySelector(".textarea");
+const textarea = document.querySelector(".textarea");
 const time = document.getElementById("time-left");
-var btn = document.getElementById('StartGame')
-var userReturn = document.getElementById("textarea");
+const btn = document.getElementById('StartGame')
+const userReturn = document.getElementById("textarea");
 const excerptsArea = document.getElementById("excerpt-area");
 const wPM = document.getElementById('wordsPerMinute');
 const accuracy = document.getElementById('accuracyDisplay')
@@ -37,15 +37,15 @@ btn.addEventListener("click", startGame);
 
 // Variables
 
-var accuracyCalc = 0;
+
 let timeLeft = 120;
-var textCompare;
-var wordsTyped;
-var totalWords = 0;
-var percentage = 00;
+let textCompare;
+let wordsTyped;
+let totalWords = 0;
+let percentage = 00;
+
 accuracy.innerHTML = percentage;
 time.innerHTML = timeLeft;
-
 // Start Game
 function startGame() {
     reset();
@@ -109,6 +109,7 @@ displayExcerpt();
 // Calculates Accuracy
 
 function calculateAccuracy() {
+    var accuracyCalc = 0;
     for (var i = 0; i < phraseCompare.length; i++) {
         for (var j = 0; j < textCompare.length; j++) {
             if (phraseCompare[i] == textCompare[j]) {
