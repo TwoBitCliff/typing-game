@@ -26,19 +26,24 @@ let excerpts = [
 
 let textarea = document.querySelector(".textarea");
 const time = document.getElementById("time-left");
-let timeLeft = 5;
-time.innerHTML = timeLeft;
 var btn = document.getElementById('StartGame')
-btn.addEventListener("click", startGame);
 var userReturn = document.getElementById("textarea");
 const excerptsArea = document.getElementById("excerpt-area");
-var textCompare
 const wPM = document.getElementById('wordsPerMinute');
+const accuracy = document.getElementById('accuracyDisplay')
+btn.addEventListener("click", startGame);
+
+let timeLeft = 120;
+var textCompare;
 var wordsTyped;
 var totalWords = 0;
-const accuracy = document.getElementById('accuracyDisplay')
 var percentage = 00;
 accuracy.innerHTML = percentage;
+time.innerHTML = timeLeft;
+
+
+
+
 
 // Start Game
 function startGame() {
@@ -50,6 +55,7 @@ function startGame() {
 function endGame() {
     time.innerHTML = "Game Over";
     calculateWPM();
+    calculateAccuracy();
     document.getElementById("textarea").disabled = true;
 }
 
@@ -62,7 +68,9 @@ const countDown = setInterval(() => {
     if (timeLeft <= 0) {
         clearInterval(countDown);
     }
-
+    else {
+        // endGame();
+    }
 }, 1000);
 
 function displayTime() {
@@ -115,7 +123,6 @@ function calculateWPM() {
     wordsTyped = textCompare.length
     totalWords = ((wordsTyped / 120) * 60);
     wPM.innerHTML = totalWords.toFixed(0);
-
 }
 
 // Reset values
@@ -123,7 +130,8 @@ function calculateWPM() {
 function reset() {
     document.getElementById("textarea").disabled = false;
     timeLeft = 120;
-
+    accuracy.innerHTML = 0;
+    wPM.innerHTML = 0;
 }
 
 // runs game
@@ -134,7 +142,8 @@ function validate(e) {
     getExcerpt();
     console.log(phraseCompare);
     accuracyCalc = 0;
-    calculateAccuracy();
     document.getElementById("textarea").value = "";
-    displayExcerpt();
+    displayExcerpt(); 
+    calculateAccuracy();
+    calculateWPM();   
 }
