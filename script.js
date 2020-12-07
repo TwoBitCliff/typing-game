@@ -33,6 +33,7 @@ const wPM = document.getElementById('wordsPerMinute');
 const accuracy = document.getElementById('accuracyDisplay')
 btn.addEventListener("click", startGame);
 
+var accuracyCalc = 0;
 let timeLeft = 120;
 var textCompare;
 var wordsTyped;
@@ -49,7 +50,7 @@ time.innerHTML = timeLeft;
 function startGame() {
     reset();
     document.getElementById("textarea").focus();
-    displayTime();
+    timer();
 }
 
 // Ends game
@@ -63,17 +64,19 @@ function endGame() {
 
 // Timer
 
-const countDown = setInterval(() => {
-    timeLeft--;
-    displayTime(timeLeft);
-    time.innerHTML = timeLeft;
-    if (timeLeft <= 0) {
-        clearInterval(countDown);
-    }
-    else {
-        // endGame();
-    }
-}, 1000);
+function timer() {
+    const countDown = setInterval(() => {
+        timeLeft--;
+        displayTime(timeLeft);
+        time.innerHTML = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(countDown);
+        }
+        if (timeLeft = 0) {
+             endGame();
+        }
+    }, 1000);
+}
 
 function displayTime() {
 }
@@ -142,10 +145,9 @@ function validate(e) {
     textCompare = text.split(" ");
     console.log(textCompare);
     getExcerpt();
-    console.log(phraseCompare);
-    accuracyCalc = 0;
+    console.log(phraseCompare);    
     document.getElementById("textarea").value = "";
-    displayExcerpt(); 
+    displayExcerpt();
     calculateAccuracy();
-    calculateWPM();   
+    calculateWPM();
 }
