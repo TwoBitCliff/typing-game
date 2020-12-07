@@ -68,7 +68,7 @@ function endGame() {
 function timer() {
     const countDown = setInterval(() => {
         timeLeft--;
-        displayTime(timeLeft);
+        
         time.innerHTML = timeLeft;
         if (timeLeft <= 0) {
             endGame();
@@ -77,13 +77,8 @@ function timer() {
     }, 1000);
 }
 
-function displayTime() {
-}
-
 // User Text
-
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
-
 userReturn.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {
         //checks whether the pressed key is "Enter"
@@ -92,7 +87,6 @@ userReturn.addEventListener("keydown", function (e) {
 });
 
 // Displays new phrase
-
 function getExcerpt() {
     return excerpts[Math.floor(Math.random() * excerpts.length)];
 }
@@ -106,7 +100,6 @@ async function displayExcerpt() {
 displayExcerpt();
 
 // Calculates Accuracy
-
 function calculateAccuracy() {
     var accuracyCalc = 0;
     for (var i = 0; i < phraseCompare.length; i++) {
@@ -123,7 +116,6 @@ function calculateAccuracy() {
 }
 
 // Calculates WPM
-
 function calculateWPM() {
     wordsTyped = textCompare.length
     totalWords = (wordsTyped / 120) * 60;
@@ -131,7 +123,6 @@ function calculateWPM() {
 }
 
 // Reset values
-
 function reset() {
     document.getElementById("textarea").disabled = false;
     timeLeft = 120;
