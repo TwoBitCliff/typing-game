@@ -23,6 +23,7 @@ let excerpts = [
     "The secret of success is to do the common thing uncommonly well",
 ];
 
+// Element selection
 
 let textarea = document.querySelector(".textarea");
 const time = document.getElementById("time-left");
@@ -33,6 +34,9 @@ const wPM = document.getElementById('wordsPerMinute');
 const accuracy = document.getElementById('accuracyDisplay')
 btn.addEventListener("click", startGame);
 
+
+// Variables
+
 var accuracyCalc = 0;
 let timeLeft = 120;
 var textCompare;
@@ -41,10 +45,6 @@ var totalWords = 0;
 var percentage = 00;
 accuracy.innerHTML = percentage;
 time.innerHTML = timeLeft;
-
-
-
-
 
 // Start Game
 function startGame() {
@@ -72,9 +72,9 @@ function timer() {
         if (timeLeft <= 0) {
             clearInterval(countDown);
         }
-        if (timeLeft = 0) {
-             endGame();
-        }
+        //  if (timeLeft = 0) {
+        //  endGame();
+        // }
     }, 1000);
 }
 
@@ -126,7 +126,7 @@ function calculateAccuracy() {
 
 function calculateWPM() {
     wordsTyped = textCompare.length
-    totalWords = ((wordsTyped / 120) * 60);
+    totalWords = (wordsTyped / 120) * 60;
     wPM.innerHTML = totalWords.toFixed(0);
 }
 
@@ -140,12 +140,13 @@ function reset() {
 }
 
 // runs game
+// https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 function validate(e) {
     var text = e.target.value;
     textCompare = text.split(" ");
     console.log(textCompare);
     getExcerpt();
-    console.log(phraseCompare);    
+    console.log(phraseCompare);
     document.getElementById("textarea").value = "";
     displayExcerpt();
     calculateAccuracy();
