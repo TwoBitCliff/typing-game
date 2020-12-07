@@ -48,6 +48,8 @@ time.innerHTML = timeLeft;
 // Start Game
 function startGame() {
     reset();
+    document.getElementById("textarea").focus();
+    displayTime();
 }
 
 // Ends game
