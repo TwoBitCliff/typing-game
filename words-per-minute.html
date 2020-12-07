@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@700&family=Trispace&display=swap');
-	</style>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-	<title>Words Per Minute</title>
-</head>
-
-<body>
-	<h1 class="main-heading">Words Per Minute</h1>
-
-	<h3 class="sub-heading">What is Your Typing Speed?</h3>
-
-	<div class="container game-box">
-		<div class="row">
-			<div class="col time-test" id="excerpt-area">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col text-input">
-            <input type="text" id="textarea" placeholder="Begin typing">
-			</div>
-		</div>
-	</div>
-
-	<div class="container wpm-score-container">
-		<div class="row">
-			<div class="col wpm-score-div">
-            <h5>Time</h5>
-            <h5><span id="time-left"></span></h5>
-			</div>
-			<div class="col wpm-score-div">
-            <h5>Accuracy</h5>
-            <h5 id="accuracyDisplay"></h5>
-			</div>
-			<div class="col wpm-score-div">
-            <h5>WPM</h5>
-            <h5 id="wordsPerMinute"></h5>
-			</div>
-		</div>
-	</div>
-
-    <div class="container btn-container">
-		<div class="row">
-			<div class="col-4">
-				<a href="index.html"><button class="btn game-link">Home</button></a>
-			</div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@700&family=Trispace&display=swap');
+      </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <title>Words Per Minute</title>
+   </head>
+   <body>
+      <h1 class="main-heading">Words Per Minute</h1>
+      <h3 class="sub-heading">What is Your Typing Speed?</h3>
+      <div class="container game-box">
+         <div class="row">
+            <div class="col time-test" id="excerpt-area">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col text-input">
+               <input type="text" id="textarea" placeholder="Begin typing">
+            </div>
+         </div>
+      </div>
+      <div class="container wpm-score-container">
+         <div class="row">
+            <div class="col wpm-score-div">
+               <h5>Time</h5>
+               <h5><span id="time-left"></span></h5>
+            </div>
+            <div class="col wpm-score-div">
+               <h5>Accuracy</h5>
+               <h5 id="accuracyDisplay"></h5>
+            </div>
+            <div class="col wpm-score-div">
+               <h5>WPM</h5>
+               <h5 id="wordsPerMinute"></h5>
+            </div>
+         </div>
+      </div>
+      <div class="container btn-container">
+         <div class="row">
             <div class="col-4">
-            <button class="btn game-link" id="StartGame">Start Game</button>
+               <a href="index.html"><button class="btn game-link">Home</button></a>
             </div>
-			<div class="col-4">
-            <a href="rules.html"><button class="btn game-link">Rules</button></a>
-
+            <div class="col-4">
+               <button class="btn game-link" id="StartGame">Start Game</button>
             </div>
-		</div>
-	</div>
-    <script src="./script.js"></script>
-</body>
-
+            <div class="col-4">
+               <a href="rules.html"><button class="btn game-link">Rules</button></a>
+            </div>
+         </div>
+      </div>
+      <script src="./script.js"></script>
+   </body>
 </html>
