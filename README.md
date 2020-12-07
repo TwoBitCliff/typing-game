@@ -1,13 +1,11 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
-
-
 ## Typing Game
+
 
 [View the live project here.](link)
 
 This is a speed typing game, where the user can practice and improve their typing speed. It calculates both how many words per minute the user can type, as well as the accuracy to which they type it.
 
-![Image of Home Page](link)
+![Image of Home Page](./assets/images/bannerimage.jpg)
 
 ## User Experience (UX)
 
@@ -106,8 +104,6 @@ This is a speed typing game, where the user can practice and improve their typin
 - To format the code, each page was run through an online formatter, https://www.freeformatter.com/.
 
 
-
-
 ## Deployment
 
 ### GitHub Pages
@@ -160,6 +156,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
+- The project was inpired by, and adapted from https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
 - The code for the vut the project to help with responsiveness, the grid system and other elements such as the navbar.
 
 ### Content
@@ -175,9 +172,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - Thanks to my Code Institute tutor, who provided support throughout the duration of this project.
 - Thanks to my Code Institute mentor, who provided ideas and feedback at pivotal stages of this project.
-- Thanks to my parents, friends and colleagues who providing constructive criticisms and pointing out spelling issues.
-- I used https://www.reddit.com/r/learnprogramming/ for issues with images displaying.
-- I used the Code Institute source material and various blog posts for issues with both code and bootsrap.
+- Thanks to my parents, friends and colleagues who providing constructive criticisms and support.
+- I used the Code Institute source material and various blog posts for issues with the code.
 
 
 
