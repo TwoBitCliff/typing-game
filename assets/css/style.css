@@ -1,141 +1,119 @@
 /* Headings */
-
-.main-heading {
-  font-family: "Roboto Condensed", sans-serif;
-  text-align: center;
-  margin-top: 10vh;
-  color: #ffff00;
-  font-size: 50px;
+ .main-heading {
+     font-family: "Roboto Condensed", sans-serif;
+     text-align: center;
+     margin-top: 10vh;
+     color: #ffff00;
+     font-size: 50px;
 }
-
-.sub-heading {
-  font-family: "Oswald", sans-serif;
-  text-align: center;
-  margin-top: 15vh;
-  color: #ffff00;
-  font-size: 30px;
+ .sub-heading {
+     font-family: "Oswald", sans-serif;
+     text-align: center;
+     margin-top: 15vh;
+     color: #ffff00;
+     font-size: 30px;
 }
-
-.rules-heading{
-    font-family: "Roboto Condensed", sans-serif;
-    font-size:35px;
+ .rules-heading{
+     font-family: "Roboto Condensed", sans-serif;
+     font-size:35px;
 }
-
 /* Backgrounds */
-
-body {
-  background-image: url("../images/typewriter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+ body {
+     background-image: url("../images/typewriter.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
 }
-
 /* Buttons */
-
-.game-link {
-  background: #ffff00;
-  border: none;
-  color: #ff0000;
-  padding: 10px 20px;
-  width: 200px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
+ .game-link {
+     background: #ffff00;
+     border: none;
+     color: #ff0000;
+     padding: 10px 20px;
+     width: 200px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 20px;
 }
-
-.btn-container {
-    text-align: center;
-    margin-top: 30px;
+ .btn-container {
+     text-align: center;
+     margin-top: 30px;
 }
-.homepage-btn-container {
-    margin-top: 20vh;
-    text-align: center;
+ .homepage-btn-container {
+     margin-top: 20vh;
+     text-align: center;
 }
-
 /* Words Per Minute */
-
-.game-box {
-    text-align: center;
-    font-family: "Roboto Condensed", sans-serif;
-    
-   }
-
-.time-test {
-    width: 75%;
-    height: 200px;
-    background: #ffff00;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 50px;
+ .game-box {
+     text-align: center;
+     font-family: "Roboto Condensed", sans-serif;
 }
-
-.text-input {
-    width: 75%;
-    height: 75px;
-    background: #ffff00;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 20px;
-    
+ .time-test {
+     width: 75%;
+     height: 200px;
+     background: #ffff00;
+     text-align: center;
+     margin-top: 10px;
+     font-size: 50px;
 }
-
-#textarea {
-    height: 100%;
-    width: 100%;
-    display: block;
-    border: 0;
-    background-color: #ffff00;
-    outline: none;
+ .text-input {
+     width: 75%;
+     height: 75px;
+     background: #ffff00;
+     text-align: center;
+     margin-top: 15px;
+     font-size: 20px;
 }
-
-.wpm-score-container {
-    text-align: center;
-    width: 75%;
+ #textarea {
+     height: 100%;
+     width: 100%;
+     display: block;
+     border: 0;
+     background-color: #ffff00;
+     outline: none;
 }
-
-.wpm-score-div {
-    text-align: center;
-    background: #ffff00;
-    width: 30px;
-    height: 100px;
-    margin-top: 15px;
-    margin-left: 35px;
-    margin-right: 35px;
-    border-radius: 25px;        
+ .wpm-score-container {
+     text-align: center;
+     width: 75%;
 }
-
+ .wpm-score-div {
+     text-align: center;
+     background: #ffff00;
+     width: 30px;
+     height: 100px;
+     margin-top: 15px;
+     margin-left: 35px;
+     margin-right: 35px;
+     border-radius: 25px;
+}
 /* Text */
-
-#excerpt-area {
-    color: black;
-    font-weight: 700;
-    font-size: 30px;
-    padding-top: 60px;
-    }
-
-.rules {
-    text-align: center;
-    background: #ffff00;
-    width: 75%;
-    padding:10px 10px 10px 10px;
-    position: relative;
-    margin-top: 15vh ! important;
-    margin: auto;
-    border-radius: 25px; 
-    font-family: "Oswald", sans-serif;
-    font-size: 20px;
-    }
-
-hr {
-    display: block;
-  border: solid 1px;
-  width: 50%;
+ #excerpt-area {
+     color: black;
+     font-weight: 700;
+     font-size: 30px;
+     padding-top: 60px;
 }
-
-ol {
-    text-align: center;
-    display: inline-block;
+ .rules {
+     text-align: center;
+     background: #ffff00;
+     width: 75%;
+     padding:10px 10px 10px 10px;
+     position: relative;
+     margin-top: 15vh ! important;
+     margin: auto;
+     border-radius: 25px;
+     font-family: "Oswald", sans-serif;
+     font-size: 20px;
 }
-li {
-    text-align: left;
+ hr {
+     display: block;
+     border: solid 1px;
+     width: 50%;
+}
+ ol {
+     text-align: center;
+     display: inline-block;
+}
+ li {
+     text-align: left;
 }
