@@ -42,7 +42,11 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-
+/* 
+.rules-btn-container {
+    text-align: center;
+    margin-top: 5px;
+} */
 .btn-container {
     text-align: center;
     margin-top: 30px;
@@ -118,10 +122,9 @@ body {
     background: #ffff00;
     width: 75%;
     padding:10px 10px 10px 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin-top: 15vh ! important;
+    margin: auto;
     border-radius: 25px; 
     font-family: "Oswald", sans-serif;
     font-size: 20px;
