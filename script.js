@@ -46,6 +46,7 @@ let percentage = 00;
 
 accuracy.innerHTML = percentage;
 time.innerHTML = timeLeft;
+
 // Start Game
 function startGame() {
     reset();
@@ -70,11 +71,9 @@ function timer() {
         displayTime(timeLeft);
         time.innerHTML = timeLeft;
         if (timeLeft <= 0) {
+            endGame();
             clearInterval(countDown);
-        }
-        //  if (timeLeft = 0) {
-        //  endGame();
-        // }
+        }        
     }, 1000);
 }
 
