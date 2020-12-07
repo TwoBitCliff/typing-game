@@ -15,15 +15,17 @@ This is a speed typing game, where the user can practice and improve their typin
 
     - As a first time visitor, I want to easily navigate the site.
     - As a first time visitor, I want to be able to test my typing speed.
-    
 
-  - Returning Visitor Goals
+ - Casual Users    
+     - As a casual user, I would like to try out a simple game.
+     - As a casual user, I would like to test my typing speed.
 
-    - As a returning visitor, I want to
+ - Office Users
+    - As an office worker, I would like to develop my typing speed.
 
-  - Frequent Visitor goals
+ - Teachers
+    - As a teacher, I would like to use the site to develop the typing speeds of my students.
 
-    - As a frequent visitor, I want to
 
 - Design
 
@@ -79,18 +81,30 @@ This is a speed typing game, where the user can practice and improve their typin
     - As a first time visitor, I want to be able to test my typing speed.
         - During and on completion of the game, the site shows the users typing speed and accuracy.
 
+- Casual Users, Office Users and Teachers
+
+    - The functionality remains the same across ass user groups. The site can be used as a casual bit of fun, to a useful skills development tool.     
+
+- Timer
+     - To test the timer, it was displayed using innerHTML to display the output, then run in the local port to ensure functionality.9o0
+
+- Accuracy
+     - To test the calculate accuracy function, the displayed excerpt was copied and pasted into the input field. This should return a result of 100%. Then, various correct and incorrect inputs were typed to ensure the accuracy displayed is accurate.
+
+- console.log()
+    - consol.log() was used at various stages of the project to ensure the functions work correctly. For example, to ensure the user input is captured correctly, and each word is split into an object of an array, console.log() was used to print the user input to the console
+
 ### Further Testing
 
 - The website was tested across multiple browsers, including Google Chrome, Firefox, Opera and Safari.
 - The website was trailed on a range of devices of different sizes, including monitors, laptops, tablets and phones.
 - The content has been run through spell checks.
 - All links were checked to ensure they are active.
-- console.log was used to ensure functionality during the project
+
 
 ### Known Issues
 
 - Functionality on mobile is diminished due to the nature of the project
- - 
 
  ### Validation
 
@@ -102,7 +116,6 @@ This is a speed typing game, where the user can practice and improve their typin
  ### Formatting
 
 - To format the code, each page was run through an online formatter, https://www.freeformatter.com/.
-
 
 ## Deployment
 
