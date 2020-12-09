@@ -39,6 +39,10 @@ let textCompare;
 let wordsTyped = 0;
 let totalWords = 0;
 let percentage = 00;
+let text;
+let errors = 0;
+let totalErrors = 0;
+let totalWords2 = 0;
 
 accuracy.innerHTML = percentage;
 time.innerHTML = timeLeft;
@@ -81,10 +85,6 @@ async function displayExcerpt() {
 	phraseCompare = phrase.split("");
 }
 displayExcerpt();
-let text;
-let errors = 0;
-let totalErrors = 0;
-let totalWords2 = 0;
 
 function compare() {
 	console.log(textCompare);
@@ -102,7 +102,7 @@ function compare() {
 	console.log(errors);
 	console.log(wordsTyped);
 }
-
+// Calculates the accuracy of the inputted text
 function calculateAccuracy() {
 	totalWords2 = 0 + wordsTyped;
 	let correctChars = (wordsTyped - (totalErrors + errors));
@@ -117,6 +117,7 @@ function calculateWPM() {
 	totalWords = (wordsTyped / 120) * 60;
 	wPM.innerHTML = totalWords.toFixed(0);
 }
+
 // Reset values 
 function reset() {
 	document.getElementById("textarea").disabled = false;
@@ -124,7 +125,8 @@ function reset() {
 	accuracy.innerHTML = 0;
 	wPM.innerHTML = 0;
 }
-// User Text
+
+// returns values on enter keypress
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 userReturn.addEventListener("keydown", function (e) {
 	if (e.keyCode === 13) {
@@ -132,8 +134,6 @@ userReturn.addEventListener("keydown", function (e) {
 		validate(e);
 	}
 });
-// returns values on enter keypress
-// https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 function validate(e) {
 	text = e.target.value;
 	textCompare = text.split("");
@@ -143,4 +143,4 @@ function validate(e) {
 	displayExcerpt();
 	calculateAccuracy();
 	calculateWPM();
-}
+};
