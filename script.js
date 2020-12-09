@@ -1,5 +1,4 @@
 // Excerpts
-
 let excerpts = [
     "Be the change that you wish to see in the world",
     "A room without books is like a body without a soul",
@@ -24,7 +23,6 @@ let excerpts = [
 ];
 
 // Element selection
-
 const textarea = document.querySelector(".textarea");
 const time = document.getElementById("time-left");
 const btn = document.getElementById('StartGame')
@@ -34,10 +32,7 @@ const wPM = document.getElementById('wordsPerMinute');
 const accuracy = document.getElementById('accuracyDisplay')
 btn.addEventListener("click", startGame);
 
-
 // Variables
-
-
 let timeLeft = 120;
 let textCompare;
 let wordsTyped;
@@ -55,7 +50,6 @@ function startGame() {
 }
 
 // Ends game
-
 function endGame() {
     time.innerHTML = "Game Over";
     calculateWPM();
@@ -64,7 +58,6 @@ function endGame() {
 }
 
 // Timer
-
 function timer() {
     const countDown = setInterval(() => {
         timeLeft--;
@@ -77,6 +70,62 @@ function timer() {
     }, 1000);
 }
 
+
+
+// Gets a random excerpt from the array
+function getExcerpt() {
+    return excerpts[Math.floor(Math.random() * excerpts.length)];
+}
+
+// Displays new excerpt
+async function displayExcerpt() {
+    const phrase = getExcerpt();
+    excerptsArea.innerText = phrase;
+    phraseCompare = phrase.split(" ");
+}
+
+displayExcerpt();
+
+let text;
+let totalErrors
+function compare(){  
+    console.log(textCompare);
+    console.log(phraseCompare);
+    let errors = 0;
+         // comparing each element of the arrays 
+        for(let i=0; i < phraseCompare.length; i++) {
+            if(textCompare[i] != phraseCompare[i]) {
+                errors++;
+                
+            }            
+        }    
+        console.log(errors); 
+}
+
+function calculateAccuracy(){
+
+}
+
+//     percentage = (accuracyCalc / phraseCompare.length) * 100;
+//     percentage2DP = percentage.toFixed(0)
+//     accuracy.innerHTML = percentage2DP + '%';
+// }
+
+// Calculates WPM
+function calculateWPM() {
+    wordsTyped = textCompare.length
+    totalWords = (wordsTyped / 120) * 60;
+    wPM.innerHTML = totalWords.toFixed(0);
+}
+
+// Reset values 
+function reset() {
+    document.getElementById("textarea").disabled = false;
+    timeLeft = 120;
+    accuracy.innerHTML = 0;
+    wPM.innerHTML = 0;
+}
+
 // User Text
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 userReturn.addEventListener("keydown", function (e) {
@@ -86,60 +135,19 @@ userReturn.addEventListener("keydown", function (e) {
     }
 });
 
-// Displays new phrase
-function getExcerpt() {
-    return excerpts[Math.floor(Math.random() * excerpts.length)];
-}
-
-async function displayExcerpt() {
-    const phrase = getExcerpt();
-    excerptsArea.innerText = phrase;
-    phraseCompare = phrase.split(" ");
-}
-
-displayExcerpt();
-
-// Calculates Accuracy
-function calculateAccuracy() {
-    var accuracyCalc = 0;
-    for (var i = 0; i < phraseCompare.length; i++) {
-        for (var j = 0; j < textCompare.length; j++) {
-            if (phraseCompare[i] == textCompare[j]) {
-                accuracyCalc++;
-            } else {
-            }
-        }
-    }
-    percentage = (accuracyCalc / phraseCompare.length) * 100;
-    percentage2DP = percentage.toFixed(0)
-    accuracy.innerHTML = percentage2DP + '%';
-}
-
-// Calculates WPM
-function calculateWPM() {
-    wordsTyped = textCompare.length
-    totalWords = (wordsTyped / 120) * 60;
-    wPM.innerHTML = totalWords.toFixed(0);
-}
-
-// Reset values
-function reset() {
-    document.getElementById("textarea").disabled = false;
-    timeLeft = 120;
-    accuracy.innerHTML = 0;
-    wPM.innerHTML = 0;
-}
-
-// runs game
+// returns values on enter keypress
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 function validate(e) {
-    var text = e.target.value;
-    textCompare = text.split(" ");
-    console.log(textCompare);
+    
+   text = e.target.value;
+    textCompare = text.split(" "); 
+    compare();    
     getExcerpt();
-    console.log(phraseCompare);
     document.getElementById("textarea").value = "";
     displayExcerpt();
-    calculateAccuracy();
-    calculateWPM();
+    // calculateAccuracy();
+    calculateWPM(); 
+      
 }
+
+
