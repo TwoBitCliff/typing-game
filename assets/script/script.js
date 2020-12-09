@@ -33,7 +33,7 @@ const accuracy = document.getElementById('accuracyDisplay');
 btn.addEventListener('click', startGame);
 
 // Variables
-const timeLeft = 120;
+let timeLeft = 120;
 let textCompare;
 let wordsTyped = 0;
 let totalWords = 0;
