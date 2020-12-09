@@ -44,8 +44,8 @@ This is a speed typing game, where the user can practice and improve their typin
     - The only image used for this project was for the background. This image of a typewriter makes for an interesting and related backdrop. 
 
   - Wireframes
-    - [Desktop](./assets/images/wireframes/desktop)
-    - [Mobile](./assets/images/wireframes/mobile)
+    - [Desktop](./assets/images/wireframes)
+    
 
 ## Features
 
@@ -105,8 +105,9 @@ This is a speed typing game, where the user can practice and improve their typin
 ### Known Issues
 
 - Functionality on mobile is diminished due to the nature of the project
+- many minor issues with JavaScript code that does not affect funtionality of the game
 
-
+ 
  ### Formatting
 
 - To format the code, each page was run through an online formatter, https://www.freeformatter.com/.
