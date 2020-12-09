@@ -93,6 +93,9 @@
      font-size: 30px;
      padding-top: 60px;
 }
+a {
+    color:red;
+    }
  .rules {
      text-align: center;
      background: #ffff00;
