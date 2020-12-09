@@ -35,7 +35,7 @@ btn.addEventListener("click", startGame);
 // Variables
 let timeLeft = 120;
 let textCompare;
-let wordsTyped;
+let wordsTyped = 0;
 let totalWords = 0;
 let percentage = 00;
 
@@ -61,12 +61,12 @@ function endGame() {
 function timer() {
     const countDown = setInterval(() => {
         timeLeft--;
-        
+
         time.innerHTML = timeLeft;
         if (timeLeft <= 0) {
             endGame();
             clearInterval(countDown);
-        }        
+        }
     }, 1000);
 }
 
@@ -81,35 +81,46 @@ function getExcerpt() {
 async function displayExcerpt() {
     const phrase = getExcerpt();
     excerptsArea.innerText = phrase;
-    phraseCompare = phrase.split(" ");
+    phraseCompare = phrase.split("");
 }
 
 displayExcerpt();
 
 let text;
-let totalErrors
-function compare(){  
+let errors = 0;
+let totalErrors = 0;
+let totalWords2 = 0;
+function compare() {
     console.log(textCompare);
     console.log(phraseCompare);
-    let errors = 0;
-         // comparing each element of the arrays 
-        for(let i=0; i < phraseCompare.length; i++) {
-            if(textCompare[i] != phraseCompare[i]) {
-                errors++;
-                
-            }            
-        }    
-        console.log(errors); 
+
+    // https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
+
+    
+
+    // comparing each element of the arrays 
+    for (let i = 0; i < phraseCompare.length; i++) {
+        if (textCompare[i] != phraseCompare[i]) {
+            errors++;
+
+        }
+    }
+    wordsTyped = textCompare.length;
+    console.log(errors);
+    console.log(wordsTyped);
 }
+
 
 function calculateAccuracy(){
-
+    totalWords2 = 0 + wordsTyped;
+ let correctChars = (wordsTyped - (totalErrors + errors));
+ console.log(correctChars);
+ percentage = ((correctChars / totalWords2) * 100);
+ console.log(percentage);
 }
 
-//     percentage = (accuracyCalc / phraseCompare.length) * 100;
-//     percentage2DP = percentage.toFixed(0)
-//     accuracy.innerHTML = percentage2DP + '%';
-// }
+
+
 
 // Calculates WPM
 function calculateWPM() {
@@ -138,16 +149,14 @@ userReturn.addEventListener("keydown", function (e) {
 // returns values on enter keypress
 // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 function validate(e) {
-    
-   text = e.target.value;
-    textCompare = text.split(" "); 
-    compare();    
+    text = e.target.value;
+    textCompare = text.split("");
+    compare();
     getExcerpt();
     document.getElementById("textarea").value = "";
     displayExcerpt();
-    // calculateAccuracy();
-    calculateWPM(); 
-      
+    calculateAccuracy();
+    calculateWPM();
 }
 
 
