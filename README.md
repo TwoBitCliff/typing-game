@@ -1,7 +1,7 @@
 ## Typing Game
 
 
-[View the live project here.](link)
+[View the live project here.](https://twobitcliff.github.io/typing-game/index.html)
 
 This is a speed typing game, where the user can practice and improve their typing speed. It calculates both how many words per minute the user can type, as well as the accuracy to which they type it.
 
@@ -35,10 +35,9 @@ This is a speed typing game, where the user can practice and improve their typin
 
   - Typography
 
-    - There have been three fonts used in this project: xxxx
-      - xx was used for xx
-      - xxx was used for xxx
-      - xx was used for xxx
+    - There have been two fonts used in this project: Oswald and Roboto condensed.
+      - Oswald was used for sub headings and rules 
+      - Roboto Condesned was used for everything else
 
   - Imagery
 
@@ -86,10 +85,10 @@ This is a speed typing game, where the user can practice and improve their typin
     - The functionality remains the same across ass user groups. The site can be used as a casual bit of fun, to a useful skills development tool.     
 
 - Timer
-     - To test the timer, it was displayed using innerHTML to display the output, then run in the local port to ensure functionality.9o0
+     - To test the timer, it was displayed using innerHTML to display the output, then run in the local port to ensure functionality.
 
 - Accuracy
-     - To test the calculate accuracy function, the displayed excerpt was copied and pasted into the input field. This should return a result of 100%. Then, various correct and incorrect inputs were typed to ensure the accuracy displayed is accurate.
+     - To test the calculate accuracy function, the displayed excerpt was copied and pasted into the input field. This should return a result of 100%. Then, various correct and incorrect inputs were typed to ensure the accuracy displayed is accurate. 
 
 - console.log()
     - consol.log() was used at various stages of the project to ensure the functions work correctly. For example, to ensure the user input is captured correctly, and each word is split into an object of an array, console.log() was used to print the user input to the console
@@ -100,18 +99,13 @@ This is a speed typing game, where the user can practice and improve their typin
 - The website was trailed on a range of devices of different sizes, including monitors, laptops, tablets and phones.
 - The content has been run through spell checks.
 - All links were checked to ensure they are active.
+- Various functions were run within the validate(e) function, so they could be tested when the return key is pressed.
 
 
 ### Known Issues
 
 - Functionality on mobile is diminished due to the nature of the project
 
- ### Validation
-
-- The [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) were used to validate each page of the site.
-- Each page had various errors that needed to be fixed. The details of each test can be found below:
-  - Home Page - [Test]() [Validated]()
-  - 
 
  ### Formatting
 
@@ -169,8 +163,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
-- The project was inpired by, and adapted from https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
-- The code for the vut the project to help with responsiveness, the grid system and other elements such as the navbar.
+- The project was inpired by, and adapted from: https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
+- Boostrap was used for the grid system.
+The function to return valued on pressing the return key was sourced here: // https://stackoverflow.com/questions/16011312/execute-function-on-enter-key
 
 ### Content
 
@@ -188,8 +183,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - Thanks to my parents, friends and colleagues who providing constructive criticisms and support.
 - I used the Code Institute source material and various blog posts for issues with the code.
 
-
-
-
-`python3 -m http.server`
 
